@@ -1,7 +1,7 @@
 public class transfer {
 
 
-    public int transfermoney(int accNo, int money)throws Exception {
+    public int transfermoney(int accNo, int money)throws Exception{
         int balance = 10000;
                 if (balance >= money) {
                     balance = balance - money;

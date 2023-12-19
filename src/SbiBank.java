@@ -2,11 +2,10 @@ import java.io.IOException;
 
 
 public class SbiBank {
-    public int Security(int securityPin,int seessiontime) throws  IOException, RuntimeException{
+    public int Security(int seessiontime,int securityPin) throws  RuntimeException{
         int loginTimeLimit = 10;
         int pin = 2502;
-
-        if(loginTimeLimit>=seessiontime){
+        if(loginTimeLimit>seessiontime){
             loginTimeLimit = loginTimeLimit-seessiontime;
             System.out.println("Active page "+loginTimeLimit+" min");
         }else{
@@ -16,7 +15,7 @@ public class SbiBank {
         if (pin == securityPin ) {
             System.out.println("Login User Successfully");
         } else {
-            throw new IOException("Enter Wrong pin");
+            throw new NullPointerException("Enter Wrong pin");
         }
        return seessiontime;
     }
