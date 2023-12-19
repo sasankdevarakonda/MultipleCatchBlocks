@@ -7,7 +7,7 @@ public class Atm {
 
         try {
             tr.connection(true);
-            sbi.Security(7,2502);
+            sbi.Security(3,2502);
             tr.transfermoney(1234, 8000);
         }catch (SecurityException e){
            System.out.println("Security Exception: "+e.getMessage());
@@ -17,7 +17,13 @@ public class Atm {
         }
         catch (RuntimeException e) {
             System.out.println("Runtime exception: " + e.getMessage());
-        }catch (Exception e){
+
+        }
+        catch (IOException e) {
+            System.out.println("Io exception: "+e.getMessage());
+        }
+        catch
+         (Exception e){
             System.out.println("Exception: "+e.getMessage());
 
         }

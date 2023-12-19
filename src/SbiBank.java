@@ -2,7 +2,7 @@ import java.io.IOException;
 
 
 public class SbiBank {
-    public int Security(int seessiontime,int securityPin) throws  RuntimeException{
+    public int Security(int seessiontime,int securityPin) throws RuntimeException, IOException {
         int loginTimeLimit = 10;
         int pin = 2502;
         if(loginTimeLimit>seessiontime){
@@ -14,9 +14,12 @@ public class SbiBank {
 
         if (pin == securityPin ) {
             System.out.println("Login User Successfully");
+            System.out.println("Transfer Amount");
         } else {
             throw new NullPointerException("Enter Wrong pin");
         }
-       return seessiontime;
+           return loginTimeLimit;
+       // throw new IOException("Please Contact Your Bank");
     }
+
 }
