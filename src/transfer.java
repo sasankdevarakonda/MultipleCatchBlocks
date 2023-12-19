@@ -1,5 +1,3 @@
-import java.io.IOException;
-
 public class transfer {
 
 
@@ -15,7 +13,7 @@ public class transfer {
     }
     public void connection(boolean security){
         if(!security){
-            throw new SecurityException();
+            throw new SecurityException("Please Contact Your Bank");
         }
     }
 }
